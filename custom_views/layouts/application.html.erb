@@ -58,8 +58,8 @@
 
     <%= tag.meta id: 'data-discourse-setup', data: client_side_setup_data %>
 
-    <%- if !current_user && cookies[:authentication_data] %>
-      <meta id="data-authentication" data-authentication-data="<%= cookies.delete(:authentication_data) %>">
+    <%- if authentication_data %>
+      <meta id="data-authentication" data-authentication-data="<%= authentication_data %>">
     <%- end %>
   </head>
 
